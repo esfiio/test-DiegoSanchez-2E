@@ -15,8 +15,8 @@ public class Main {
     /**
      * Metodo para pedir el numero al usuario
      * @param scanner -> declarado en el main
-     * @param mensaje ->
-     * @return
+     * @param mensaje -> es un parametro
+     * @return -> int el numero solicitado al usuario
      */
 
     public static int pedirEntero(Scanner scanner, String mensaje){
