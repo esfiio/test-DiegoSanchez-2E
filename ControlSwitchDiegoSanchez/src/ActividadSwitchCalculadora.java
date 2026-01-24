@@ -6,10 +6,30 @@ public class ActividadSwitchCalculadora {
         Scanner sc = new Scanner(System.in);
         imprimirMenu();
         int opcion= sc.nextInt();
-        double variableA= obtenerDouble(sc, "Ingresa el primer numero de a operación");
-        double variableB= obtenerDouble(sc,"Ingresa el segundo numero de la operación");
-        double suma= variableA+variableB;
-        System.out.println("La suma es:"+ suma);
+
+        switch(opcion){
+            case 1:
+                double suma=obtenerSuma(sc);
+                System.out.println("El resultado de la suma es: "+ suma);
+                break;
+            case 2:
+                double resta=obtenerResta(sc);
+                System.out.println("El resultado de la resta es: "+ resta);
+                break;
+            case 3:
+                double multiplicacion=obtenerMultiplicacion(sc);
+                System.out.println("El resultado de la multiplicacion es: "+ multiplicacion);
+                break;
+            case 4:
+                double division=obtenerDivision(sc);
+                System.out.println("El resultado de la multiplicacion es: "+ division);
+                break;
+            default:
+                System.out.println("Opcion invalida");
+                break;
+
+
+        }
     }
 
     /**
@@ -23,16 +43,46 @@ public class ActividadSwitchCalculadora {
         return sc.nextDouble();
     }
 
+    /**
+     * Metodo para imprimir el menu
+     */
     public static void imprimirMenu(){
         System.out.println("-------Menú-------");
-        System.out.println("Elige la operación que desees realizar:");
         System.out.println("1. Sumar");
         System.out.println("2. Restar");
         System.out.println("3. Multiplicar");
         System.out.println("4. Dividir");
+        System.out.println("Elige la operación que desees realizar:");
     }
 
-    public static double hacerOperaciones(int sc, double variableA, double variableB){
+    public static double obtenerSuma(Scanner sc){
+        System.out.println("Elegiste hacer una suma");
+        double variableA= obtenerDouble(sc, "Ingresa el primer numero de a operación");
+        double variableB= obtenerDouble(sc,"Ingresa el segundo numero de la operación");
+        return variableA+variableB;
+    }
 
+    public static double obtenerResta(Scanner sc){
+        System.out.println("Elegiste hacer una resta");
+        double variableA= obtenerDouble(sc, "Ingresa el primer numero de a operación");
+        double variableB= obtenerDouble(sc,"Ingresa el segundo numero de la operación");
+        return variableA-variableB;
+    }
+
+    public static double obtenerMultiplicacion(Scanner sc){
+        System.out.println("Elegiste hacer una multiplicacion");
+        double variableA= obtenerDouble(sc, "Ingresa el primer numero de la operación");
+        double variableB= obtenerDouble(sc, "Ingresa el segundo numero de la operación");
+        return variableA*variableB;
+    }
+
+    public static double obtenerDivision(Scanner sc){
+        System.out.println("Elegiste hacer una division");
+        double variableA= obtenerDouble(sc, "Ingresa el primer numero de la operación");
+        double variableB= obtenerDouble(sc, "Ingresa el segundo numero de la operación");
+        if(variableB==0){
+            System.out.println("No se puede dividir entre 0");
+        }
+        return variableA/variableB;
     }
 }
