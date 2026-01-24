@@ -52,34 +52,58 @@ public class ActividadSwitchCalculadora {
         System.out.println("2. Restar");
         System.out.println("3. Multiplicar");
         System.out.println("4. Dividir");
-        System.out.println("Elige la operación que desees realizar:");
+        System.out.print("Elige la operación que desees realizar:");
     }
 
+    /**
+     *
+     * @param sc
+     * @return
+     */
     public static double obtenerSuma(Scanner sc){
         System.out.println("Elegiste hacer una suma");
         double variableA= obtenerDouble(sc, "Ingresa el primer numero de a operación");
         double variableB= obtenerDouble(sc,"Ingresa el segundo numero de la operación");
+        System.out.println("Los numeros que ingresaste fueron: "+ variableA+" y "+ variableB);
         return variableA+variableB;
     }
 
+    /**
+     *
+     * @param sc
+     * @return
+     */
     public static double obtenerResta(Scanner sc){
         System.out.println("Elegiste hacer una resta");
         double variableA= obtenerDouble(sc, "Ingresa el primer numero de a operación");
         double variableB= obtenerDouble(sc,"Ingresa el segundo numero de la operación");
+        System.out.println("Los numeros que ingresaste fueron: "+ variableA+" y "+ variableB);
         return variableA-variableB;
     }
 
+    /**
+     *
+     * @param sc
+     * @return
+     */
     public static double obtenerMultiplicacion(Scanner sc){
         System.out.println("Elegiste hacer una multiplicacion");
         double variableA= obtenerDouble(sc, "Ingresa el primer numero de la operación");
         double variableB= obtenerDouble(sc, "Ingresa el segundo numero de la operación");
+        System.out.println("Los numeros que ingresaste fueron: "+ variableA+" y "+ variableB);
         return variableA*variableB;
     }
 
+    /**
+     *
+     * @param sc
+     * @return
+     */
     public static double obtenerDivision(Scanner sc){
         System.out.println("Elegiste hacer una division");
         double variableA= obtenerDouble(sc, "Ingresa el primer numero de la operación");
         double variableB= obtenerDouble(sc, "Ingresa el segundo numero de la operación");
+        System.out.println("Los numeros que ingresaste fueron: "+ variableA+" y "+ variableB);
         if(variableB==0){
             System.out.println("No se puede dividir entre 0");
         }
