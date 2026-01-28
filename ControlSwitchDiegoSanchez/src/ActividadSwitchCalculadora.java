@@ -56,9 +56,9 @@ public class ActividadSwitchCalculadora {
     }
 
     /**
-     *
-     * @param sc
-     * @return
+     *Metodo para obtener la suma
+     * @param sc -> declarado en el main
+     * @return -> double resultado de la suma de las variables
      */
     public static double obtenerSuma(Scanner sc){
         System.out.println("Elegiste hacer una suma");
@@ -82,9 +82,9 @@ public class ActividadSwitchCalculadora {
     }
 
     /**
-     *
-     * @param sc
-     * @return
+     * Metodo para obtener la multiplicacion
+     * @param sc -> declaradoe en el main
+     * @return -> double
      */
     public static double obtenerMultiplicacion(Scanner sc){
         System.out.println("Elegiste hacer una multiplicacion");
