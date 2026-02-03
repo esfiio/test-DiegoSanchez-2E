@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static double pi=3.1416;
+    public static double pi = 3.1416;
 
     public static void main(String[] args) {
 
@@ -55,51 +55,57 @@ public class Main {
 
     /**
      * Metodo que retorna el valor que ingresamos en la terminal
-     * @param sc -> declarado en el main
+     *
+     * @param sc      -> declarado en el main
      * @param mensaje -> es un parametro
      * @return -> double
      */
-    public static double obtenerDouble(Scanner sc, String mensaje){
+    public static double obtenerDouble(Scanner sc, String mensaje) {
         System.out.println(mensaje);
         return sc.nextDouble();
     }
 
     /**
      * Metodo para obtener el IMC como lo vimos en clase
-     * @param pesoKg -> peso en KG
+     *
+     * @param pesoKg  -> peso en KG
      * @param alturaM -> peso en metros M
      * @return double IMC
      */
-    public static double calcularIMC(double pesoKg, double alturaM){
-        return pesoKg/(alturaM*alturaM);
+    public static double calcularIMC(double pesoKg, double alturaM) {
+        return pesoKg / (alturaM * alturaM);
     }
 
     /**
      * Metodo para obtener el area del rectangulo
-     * @param baseCm -> base en CM
+     *
+     * @param baseCm   -> base en CM
      * @param alturaCm -> altura en CM
      * @return -> double Area del Rectangulo
      */
 
-    public static double calcularAreaRectangulo(double baseCm, double alturaCm){
-        return baseCm*alturaCm;
+    public static double calcularAreaRectangulo(double baseCm, double alturaCm) {
+        return baseCm * alturaCm;
     }
 
     /**
      * Metodo para pasar de Grados celcius a Fahrenheit
+     *
      * @param c -> temperatura en grados celsius
      * @return -> Grados Farenheit
      */
-    public static double pasarGradosAFahrenheit(double c){
-        return (c*1.8)+32;
+    public static double pasarGradosAFahrenheit(double c) {
+        return (c * 1.8) + 32;
     }
 
     /**
      * Metodo para sacar el area del circulo
-     * @param pi -> constante de pi (3.1416)
+     *
+     * @param pi      -> constante de pi (3.1416)
      * @param radioCM -> medida del raido en CM
      * @return -> area del circulo
      */
-    public static double calcularAreaCirculo(double pi, double radioCM){
-        return pi*(radioCM*radioCM);
+    public static double calcularAreaCirculo(double pi, double radioCM) {
+        return pi * (radioCM * radioCM);
     }
+}
