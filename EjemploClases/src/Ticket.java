@@ -2,7 +2,7 @@ public class Ticket {
 
     public double DESCUENTO = 0.10;
     public double PRECIO = 10;
-    public double subtotal;
+    public double subtotal=0;
     public double descuentoCalculado;
     public double total;
 
