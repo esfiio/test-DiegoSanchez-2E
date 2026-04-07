@@ -1,16 +1,33 @@
 package com.example.practicajavafx01.ServiceCancion;
 
 import com.example.practicajavafx01.Cancion;
+import com.example.practicajavafx01.Repositories.CancionesRepository;
 import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.List;
+
 public class Service {
+
+    private CancionesRepository repositorio = new CancionesRepository();
 
     private  ObservableList<Cancion> listaCanciones =FXCollections.observableArrayList();
 
     public ObservableList<Cancion> getAllCanciones() {
         return listaCanciones;
+    }
+
+    private void cargarDatos(){
+        try {
+            List<String> lineas = repositorio.leerTodasLasLineas();
+            for (String linea : lineas);
+            String[] partes = linea.split("-");
+
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void agregarCancion(String titulo, String artista, String categoria){
